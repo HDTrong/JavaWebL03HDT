@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package baitapvonglap;
+package btvonglap;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author PC
  */
-public class UCLL_BCNN {
+public class UCLN_BCNN {
     public static void main(String[] args) {
         System.out.println("Nhap a: ");
         Scanner sc = new Scanner(System.in);
