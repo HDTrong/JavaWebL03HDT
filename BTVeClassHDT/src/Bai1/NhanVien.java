@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author PC
  */
-public class NhanVien {
+public class NhanVien{
     private String Ten;
     private int Tuoi;
     private String DiaChi;
