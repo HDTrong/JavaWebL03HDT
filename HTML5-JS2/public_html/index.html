@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/script.js"></script>
+
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+      function chia(){
+        alert("teo");
+}
+</script>
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div class="wrapper">
+		<input class="show" id="ketqua" type="text"/>
+	
+        
+
+        <div>
+        <input type="button" value="7" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" value="8" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" value="9" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut operator" value="/" onclick="chia();"/> 
+        
+        </div>
+
+        <div>
+        <input type="button" value="4" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" value="5" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" value="6" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut operator" value="*" onclick="ketqua.value+=this.value"/>
+        
+        </div>
+
+        <div>
+        <input type="button" value="1" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" value="2" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" value="3" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut operator" value="+" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut operator" value="-" onclick="ketqua.value+=this.value"/>
+
+        </div>
+
+        <div>
+        <input type="button" value="0" class="nut khong num"  onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut " value="." onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut" value="=" onclick="ketqua.value=eval(ketqua.value)"/>
+        </div>
+                <div>
+                    <td>Nhập số 1:</td>
+                    <td><input id="so1" type="text" /></td>
+                    
+                </div>        
+                <div>
+                    <td>Nhập số 2:</td>
+                    <td><input id="so2" type="text" /></td>
+                </div>
+                <p>
+                    <input name="button" type="button" onclick = "ketquaco()" value="+" />
+                    <input name="button" type="button" onclick = "ketquat()" value="-" />
+                    <input name="button" type="button" onclick = "ketquan()" value="*" />
+                    <input name="button" type="button" onclick = "ketquac()" value="/" />
+                </p>
+                <tr>
+                    <td>Kết Quả:</td>
+                    <td><input style="color:red; font-weight:bold;" id="kq" type="text" disabled="disabled" /></td>
+                </tr>
+                <br></br>
+                <hr></hr>
+                
+                <div>
+                    <td>Name:</td>
+                    <td><input id="name" type="text" /></td>                    
+                </div>
+                <hr></hr>
+                <div>
+                    <td>Emil:</td>
+                    <td><input id="name" type="text" /></td>                    
+                </div>
+                <hr></hr>
+                <div>
+                    <td>Website:</td>
+                    <td><input id="name" type="text" /></td>                    
+                </div>
+                <hr></hr>
+                <div>
+                    <td>Massage:</td>
+                    <td><input id="name" type="text" /></td>                    
+                </div>
+                <hr></hr>
+                <div>
+                    <p>
+                        <input name="button" type="button" onclick = "submit()" value="submit" />
+                    </p>
+                </div>
+                
+                <script>
+                    function submit(){
+                        
+                    }
+                    function ketquaco()
+                        {
+                            var so1 = document.getElementById("so1").value;
+                            var so2 = document.getElementById("so2").value;
+                            var num1 = parseInt(so1);
+                            var num2 = parseInt(so2);                            
+                            var kq = num1+num2;
+                            document.getElementById("kq").value = kq;
+                        }
+                    function ketquat()
+                        {
+                            var so1 = document.getElementById("so1").value;
+                            var so2 = document.getElementById("so2").value;
+                            var num1 = parseInt(so1);
+                            var num2 = parseInt(so2);
+                            var kq = num1-num2;
+                            document.getElementById("kq").value = kq;
+                            
+                        }
+                    function ketquan()
+                        {
+                            var so1 = document.getElementById("so1").value;
+                            var so2 = document.getElementById("so2").value;
+                            var num1 = parseInt(so1);
+                            var num2 = parseInt(so2);
+                            var kq = num1*num2;
+                            document.getElementById("kq").value = kq;
+                            
+                        }
+                    function ketquac(){
+                        var so1 = document.getElementById("so1").value;
+                        var so2 = document.getElementById("so2").value;
+                        var num1 = parseInt(so1);
+                        var num2 = parseInt(so2);
+                        if(num2 == 0)
+                        {
+                            document.getElementById("kq").value = "Ko chia duoc";
+                            return false;
+                        }
+                        else
+                        {
+                            var kq = num1/num2;
+                            document.getElementById("kq").value = kq;
+                        }
+                    }
+                    
+                    
+                </script>
+                
+        
+        
+</body>
+</html>
